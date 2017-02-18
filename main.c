@@ -16,5 +16,10 @@ int main()
 	printf("Введите сумму вклада: ");
 	scanf("%d", &sum);
 
+	if (CheckInput(time,sum) == 0)
+	{
+		printf("Некоректный ввод\n");
+		return 0;
+	}
 	return 0;
 }
