@@ -12,7 +12,7 @@ int CalcSumDeposit(int time, int sum)
 {
 	float bonusPercent = 0;
 	if (sum >= 100000)
-		bonusPercent = 0.01;:
+		bonusPercent = 0.01;
 	if (time <= 30)
 	{
 		sum *= 0.9;
