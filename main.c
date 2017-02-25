@@ -43,7 +43,7 @@ int main()
 	if (CheckInput(time, sum) == 0)
 	{
 		printf("Некоректный ввод\n");
-		return 0;
+		return 1;
 	}
 
 	printf("%d", CalcSumDeposit(time, sum));
