@@ -34,7 +34,7 @@ int CalcSumDeposit(int time, int sum)
 
 int main()
 {
-	int time, sum, percent;
+	int time, sum;
 	printf("Введите срок вклада: ");
 	scanf("%d", &time);
 	printf("Введите сумму вклада: ");
