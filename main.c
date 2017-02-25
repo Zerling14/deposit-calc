@@ -3,7 +3,7 @@
 
 int CheckInput(int time, int sum)
 {
-	if ((time >= 0) && (time <=365) && (sum >= 10000))
+	if ((time >= 0) && (time <= 365) && (sum >= 10000))
 		return 1;
 	return 0;
 }
@@ -16,7 +16,7 @@ int main()
 	printf("Введите сумму вклада: ");
 	scanf("%d", &sum);
 
-	if (CheckInput(time,sum) == 0)
+	if (CheckInput(time, sum) == 0)
 	{
 		printf("Некоректный ввод\n");
 		return 0;
