@@ -45,5 +45,8 @@ int main()
 		printf("Некоректный ввод\n");
 		return 0;
 	}
+
+	printf("%d", CalcSumDeposit(time, sum));
+
 	return 0;
 }
