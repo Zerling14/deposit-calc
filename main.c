@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int CheckInput(int depDay, int sum)
-{
-	if ((depDay >= 0) && (depDay <= 365) && (sum >= 10000))
-		return 1;
-	return 0;
-}
+#include "deposit.h"
 
 int CalcSumDeposit(int depDay, int sum)
 {
