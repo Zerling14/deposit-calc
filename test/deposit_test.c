@@ -47,7 +47,7 @@ CTEST(CalcSumDeposit, calc_sum_31_less_100k)
 	const int dep = 99999;
 	const int result = CalcSumDeposit(day, dep);
 	
-	const int expect = 101998;
+	const int expect = 101999;
 	ASSERT_EQUAL(expect, result);
 }
 
@@ -67,7 +67,7 @@ CTEST(CalcSumDeposit, calc_sum_120_less_100k)
 	const int dep = 99999;
 	const int result = CalcSumDeposit(day, dep);
 	
-	const int expect = 101998;
+	const int expect = 101999;
 	ASSERT_EQUAL(expect, result);
 }
 
@@ -87,7 +87,7 @@ CTEST(CalcSumDeposit, calc_sum_121_less_100k)
 	const int dep = 99999;
 	const int result = CalcSumDeposit(day, dep);
 	
-	const int expect = 105998;
+	const int expect = 105999;
 	ASSERT_EQUAL(expect, result);
 }
 
@@ -107,7 +107,7 @@ CTEST(CalcSumDeposit, calc_sum_240_less_100k)
 	const int dep = 99999;
 	const int result = CalcSumDeposit(day, dep);
 	
-	const int expect = 105998;
+	const int expect = 105999;
 	ASSERT_EQUAL(expect, result);
 }
 
@@ -127,7 +127,7 @@ CTEST(CalcSumDeposit, calc_sum_241_less_100k)
 	const int dep = 99999;
 	const int result = CalcSumDeposit(day, dep);
 	
-	const int expect = 111998;
+	const int expect = 111999;
 	ASSERT_EQUAL(expect, result);
 }
 
@@ -147,7 +147,7 @@ CTEST(CalcSumDeposit, calc_sum_365_less_100k)
 	const int dep = 99999;
 	const int result = CalcSumDeposit(day, dep);
 	
-	const int expect = 111998;
+	const int expect = 111999;
 	ASSERT_EQUAL(expect, result);
 }
 
