@@ -1,7 +1,7 @@
-#include "ctest.h"
-#include "deposit.h"
+#include <ctest.h>
+#include <deposit.h>
 
-CTEST(CheckInput, valid_input_-1_less_10k)
+CTEST(CheckInput, valid_input_negative_less_10k)
 {
 	const int day = -1;
 	const int dep = 0;
@@ -10,7 +10,7 @@ CTEST(CheckInput, valid_input_-1_less_10k)
 	ASSERT_FALSE(result);
 }
 
-CTEST(CheckInput, valid_input_-1_more_10k)
+CTEST(CheckInput, valid_input_negative_more_10k)
 {
 	const int day = -1;
 	const int dep = 10000;
@@ -37,7 +37,7 @@ CTEST(CheckInput, valid_input_0_more_10k)
 	ASSERT_TRUE(result);
 }
 
-CTEST(CheckInput, valid_input_0_less_10k)
+CTEST(CheckInput, valid_input_365_less_10k)
 {
 	const int day = 365;
 	const int dep = 0;
@@ -46,7 +46,7 @@ CTEST(CheckInput, valid_input_0_less_10k)
 	ASSERT_FALSE(result);
 }
 
-CTEST(CheckInput, valid_input_0_more_10k)
+CTEST(CheckInput, valid_input_365_more_10k)
 {
 	const int day = 365;
 	const int dep = 10000;
@@ -55,7 +55,7 @@ CTEST(CheckInput, valid_input_0_more_10k)
 	ASSERT_TRUE(result);
 }
 
-CTEST(CheckInput, valid_input_0_less_10k)
+CTEST(CheckInput, valid_input_366_less_10k)
 {
 	const int day = 366;
 	const int dep = 0;
@@ -64,7 +64,7 @@ CTEST(CheckInput, valid_input_0_less_10k)
 	ASSERT_FALSE(result);
 }
 
-CTEST(CheckInput, valid_input_0_more_10k)
+CTEST(CheckInput, valid_input_366_more_10k)
 {
 	const int day = 366;
 	const int dep = 10000;

@@ -1,5 +1,5 @@
-#include "ctest.h"
-#include "deposit.h"
+#include <ctest.h>
+#include <deposit.h>
 
 CTEST(CalcSumDeposit, calc_sum_0_less_100k)
 {
