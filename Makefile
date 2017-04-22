@@ -1,16 +1,36 @@
 all: bin/main
 
-bin/main: build/main.o build/deposit.o
+test: bin/main_test
+
+bin/main: build/src/main.o build/src/deposit.o
 	mkdir bin -p
-	gcc -Wall -Werror -o bin/main build/deposit.o build/main.o
-build/main.d: src/main.c
+	gcc -Wall build/src/deposit.o build/src/main.o -o bin/main
+
+build/src/main.o: src/main.c
 	mkdir build -p
-	gcc -Wall -Werror -c -o build/main.o src/main.c -MP -MMD
-build/deposit.d: src/deposit.c
+	mkdir build/src -p
+	gcc -Wall -c -o build/src/main.o src/main.c	
+
+build/src/deposit.o: src/deposit.c
 	mkdir build -p
-	gcc -Wall -Werror -c -o build/deposit.o src/deposit.c -MP -MMD
+	mkdir build/src -p
+	gcc -Wall -c -o build/src/deposit.o src/deposit.c
+
+bin/main_test: build/test/deposit_test.o build/test/main.o build/src/deposit.o
+	mkdir bin -p
+	gcc -I thirdparty -I src -Wall build/test/deposit_test.o build/test/main.o build/src/deposit.o -o bin/main_test
+
+build/test/main.o: test/main.c
+	mkdir build -p
+	mkdir build/test -p
+	gcc -I thirdparty -I src -Wall -c test/main.c -o build/test/main.o
+	
+build/test/deposit_test.o: test/deposit_test.c
+	mkdir build -p
+	mkdir build/test -p
+	gcc -I thirdparty -I src -Wall -c test/deposit_test.c -o build/test/deposit_test.o
+	
 .PHONY: clean
 clean:
-	rm build/*
--include build/main.d
--include build/deposit.d
+	rm build/* -rf
+	rm bin/* -rf
