@@ -1,16 +1,12 @@
+#include "ctest.h"
 #include "deposit.h"
-#include <stdio.h>
 
-CTEST(test_input, simple)
+CTEST(arithmetic_suite, simle_sum)
 {
-    // Given
-    const int a = 10;
-    const int b = 20000;
-
-    // When
-    const int result = CheckInput(a, b);
-
-    // Then
-    const int expected = 1;
-    ASSERT_EQUAL(expected, result);
+	const int day = 20;
+	const int dep = 30000;
+	const int result = CalcSumDeposit(day, dep);
+	
+	const int expect = 27000;
+	ASSERT_DBL_NEAR(expect, result);
 }
