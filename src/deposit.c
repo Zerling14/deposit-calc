@@ -20,7 +20,7 @@ int CalcSumDeposit(int depDay, int sum)
 	}
 	else if (depDay <= 240)
 	{
-		sum = 0.5 + ((double)sum * (1.0 + 0.06 + bonusPercent * 2));
+		sum = 0.5 + ((double)sum * (1.0 + 0.6 + bonusPercent * 2));
 	}
 	else if (depDay <= 365)
 	{
