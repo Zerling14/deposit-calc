@@ -19,6 +19,7 @@ build/src/deposit.o: src/deposit.c
 bin/main_test: build/test/deposit_test.o build/test/main.o build/src/deposit.o build/src/validation_test.o
 	mkdir bin -p
 	gcc -I thirdparty -I src -Wall build/test/deposit_test.o build/test/main.o build/src/deposit.o build/src/validation_test.o -o bin/main_test
+	bin/main_test
 
 build/test/main.o: test/main.c
 	mkdir build -p
